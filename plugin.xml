@@ -7,9 +7,18 @@
 	
 			 <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="PluginName">
+            <feature name="PosActivity">
                 <param name="android-package" value="com.pos.activity.plugin.PosActivity" />
             </feature>
+                  <feature name="TransBean">
+       <param name="android-package" value="com.sunmi.trans.TransBean" />
+     </feature>
+      <feature name="ICallback">
+       <param name="android-package" value="com.woyou.aidlservice.jiuiv5.ICallback" />
+     </feature>
+      <feature name="IWoyouService">
+       <param name="android-package" value="com.woyou.aidlservice.jiuiv5.IWoyouService" />
+     </feature>
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity android:label="New Activity" android:name="com.pos.activity.plugin.NewActivity"></activity>
@@ -18,5 +27,9 @@
         <source-file src="src/android/PosActivity.java" target-dir="src/com/pos/activity/plugin" />
         <source-file src="src/android/NewActivity.java" target-dir="src/com/pos/activity/plugin" />
         <source-file src="src/android/activity_new.xml" target-dir="res/layout"/>
+         <source-file src="src/android/sunmi/TransBean.java" target-dir="src/sunmi" />
+        <source-file src="src/android/woyou/aidlservice/jiuiv5/ICallback.java" target-dir="src/woyou/aidlservice/jiuiv5" />
+        <source-file src="src/android/woyou/aidlservice/jiuiv5/IWoyouService.java" target-dir="src/woyou/aidlservice/jiuiv5" />
+
     </platform>
 		</plugin>
