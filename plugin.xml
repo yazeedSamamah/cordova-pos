@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.pos.activity.plugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>PosActivity</name>
+	<js-module name="PosActivity" src="www/PosActivity.js">
+		<clobbers target="cordova.plugins.PosActivity" />
+	</js-module>
+	
+			 <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="PluginName">
+                <param name="android-package" value="com.pos.activity.plugin.PosActivity" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:label="New Activity" android:name="com.pos.activity.plugin.NewActivity"></activity>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/PosActivity.java" target-dir="src/com/pos/activity/plugin" />
+        <source-file src="src/android/NewActivity.java" target-dir="src/com/pos/activity/plugin" />
+        <source-file src="src/android/activity_new.xml" target-dir="res/layout"/>
+    </platform>
+		</plugin>
