@@ -23,13 +23,13 @@ import android.R;
 
 public class NewActivity extends Activity {
 
-   /* @Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         String package_name = getApplication().getPackageName();
         setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
-    }*/
-    WebView mWebView;
+    }
+   /* WebView mWebView;
 
 
 	@SuppressLint("SetJavaScriptEnabled")
@@ -72,10 +72,7 @@ public class NewActivity extends Activity {
 		@Override
 		public void onPageFinished(WebView view, String url) {
 			super.onPageFinished(view, url);
-			 /**
-	         * 注册JavascriptInterface，其中"lee"的名字随便取，如果你用"lee"，那么在html中只要用  lee.方法名()
-	         * 即可调用MyJavascriptInterface里的同名方法，参数也要一致
-	         */
+			
 			mWebView.addJavascriptInterface(new JsObject(), "lee");
 		}
 
@@ -128,5 +125,5 @@ public class NewActivity extends Activity {
 		public void onRaiseException(int code, final String msg)
 				throws RemoteException {
 		}
-	};
+	};*/
 }
