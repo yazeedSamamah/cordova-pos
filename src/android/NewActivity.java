@@ -36,13 +36,28 @@ public class NewActivity extends Activity {
 			woyouService = IWoyouService.Stub.asInterface(service);
 		}
 	};
+	ICallback callback = new ICallback.Stub() {
+
+		@Override
+		public void onRunResult(boolean success) throws RemoteException {
+		}
+
+		@Override
+		public void onReturnString(final String value) throws RemoteException {
+		}
+
+		@Override
+		public void onRaiseException(int code, final String msg)
+				throws RemoteException {
+		}
+	};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
    //    String package_name = getApplication().getPackageName();
        // setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
         try {
-        
+
 				woyouService.printerSelfChecking(callback);//这里使用的AIDL方式打印
 			} catch (RemoteException e) {
 				e.printStackTrace();
