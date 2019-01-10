@@ -34,7 +34,7 @@ public class NewActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-	//	setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_main);
 		initViews();
 		// 设置编码
 		mWebView.getSettings().setDefaultTextEncodingName("utf-8");
@@ -94,7 +94,7 @@ public class NewActivity extends Activity {
 	}
 
 	public void initViews() {
-	//	mWebView = (WebView) findViewById(R.id.wv_view);
+		mWebView = (WebView) findViewById(R.id.wv_view);
 	}
 
 	private IWoyouService woyouService;
