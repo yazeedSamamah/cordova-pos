@@ -54,8 +54,13 @@ public class NewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    String package_name = getApplication().getPackageName();
-       setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
+        Intent intent = new Intent();
+		intent.setPackage("woyou.aidlservice.jiuiv5");
+		intent.setAction("woyou.aidlservice.jiuiv5.IWoyouService");
+		startService(intent);//启动打印服务
+		bindService(intent, connService, Context.BIND_AUTO_CREATE);
+   // String package_name = getApplication().getPackageName();
+     //  setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
         try {
 
 				woyouService.printerSelfChecking(callback);//这里使用的AIDL方式打印
