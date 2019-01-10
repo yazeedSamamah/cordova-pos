@@ -29,6 +29,20 @@ public class NewActivity extends Activity {
    //    String package_name = getApplication().getPackageName();
        // setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
         try {
+        	private IWoyouService woyouService;
+
+	private ServiceConnection connService = new ServiceConnection() {
+
+		@Override
+		public void onServiceDisconnected(ComponentName name) {
+			woyouService = null;
+		}
+
+		@Override
+		public void onServiceConnected(ComponentName name, IBinder service) {
+			woyouService = IWoyouService.Stub.asInterface(service);
+		}
+	};
 				woyouService.printerSelfChecking(callback);//这里使用的AIDL方式打印
 			} catch (RemoteException e) {
 				e.printStackTrace();
