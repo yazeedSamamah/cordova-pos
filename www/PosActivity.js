@@ -12,5 +12,5 @@ module.exports = new plugin();*/
 var exec = require('cordova/exec');
 
 exports.new_activity = function( str, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'PosActivity', 'new_activity', str);
+    cordova.exec(successCallback, errorCallback, 'PosActivity', 'new_activity', []);
 };
