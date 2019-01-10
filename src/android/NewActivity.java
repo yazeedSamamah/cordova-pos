@@ -26,8 +26,13 @@ public class NewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String package_name = getApplication().getPackageName();
-        setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
+   //    String package_name = getApplication().getPackageName();
+       // setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
+        try {
+				woyouService.printerSelfChecking(callback);//这里使用的AIDL方式打印
+			} catch (RemoteException e) {
+				e.printStackTrace();
+			}
     }
    /* WebView mWebView;
 
