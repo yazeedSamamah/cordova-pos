@@ -27,12 +27,16 @@
         <source-file src="src/android/PosActivity.java" target-dir="src/com/pos/activity/plugin" />
         <source-file src="src/android/NewActivity.java" target-dir="src/com/pos/activity/plugin" />
         <source-file src="src/android/activity_new.xml" target-dir="res/layout"/>
+
+
         <source-file src="src/android/sunmi/TransBean.java" target-dir="src/sunmi"/>
         <source-file src="src/android/woyou/aidlservice/jiuiv5/ICallback.java" target-dir="src/woyou/aidlservice/jiuiv5"/>
         <source-file src="src/android/woyou/aidlservice/jiuiv5/IWoyouService.java" target-dir="src/woyou/aidlservice/jiuiv5"/>
-        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="src/aidl/woyou/aidlservice/jiuiv5"/>
-        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="src/aidl/woyou/aidlservice/jiuiv5"/>
-         <source-file src="src/android/aidl/com/sunmi/trans/TransBean.aidl" target-dir="src/aidl/com/sunmi/trans"/>
+
+
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="src/woyou/aidlservice/jiuiv5"/>
+        <source-file src="src/android/aidl/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="src/woyou/idlservice/jiuiv5"/>
+         <source-file src="src/android/aidl/com/sunmi/trans/TransBean.aidl" target-dir="src/com/sunmi/trans"/>
 
     </platform>
 		</plugin>
