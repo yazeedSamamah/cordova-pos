@@ -23,7 +23,7 @@ import android.app.AlertDialog;
 
 public class NewActivity extends Activity {
 	private IWoyouService woyouService;
-
+    final Context context = this;
 	private ServiceConnection connService = new ServiceConnection() {
 
 		@Override
@@ -67,7 +67,7 @@ public class NewActivity extends Activity {
 			} catch (RemoteException e) {
 				e.printStackTrace();
 			}*/
-				AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(context);
 alertDialog.setTitle("Alert");
 alertDialog.setMessage("Alert message to be shown");
 alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
