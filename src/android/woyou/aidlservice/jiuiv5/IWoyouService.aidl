@@ -5,7 +5,7 @@
 
 package woyou.aidlservice.jiuiv5;
 
-import aidl.woyou.aidlservice.jiuiv5.ICallback;
+import woyou.aidlservice.jiuiv5.ICallback;
 import android.graphics.Bitmap;
 import aidl.com.sunmi.trans.TransBean;
 
