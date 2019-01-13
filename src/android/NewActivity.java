@@ -5,7 +5,7 @@ import android.os.Bundle;
 import woyou.aidlservice.jiuiv5.ICallback;
 import woyou.aidlservice.jiuiv5.IWoyouService;
 import android.annotation.SuppressLint;
-
+import android.content.DialogInterface;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
