@@ -2,8 +2,8 @@ package com.pos.activity.plugin;
 
 import android.app.Activity;
 import android.os.Bundle;
-import woyou.aidlservice.jiuiv5.ICallback;
-import woyou.aidlservice.jiuiv5.IWoyouService;
+import aidl.woyou.aidlservice.jiuiv5.ICallback;
+import aidl.woyou.aidlservice.jiuiv5.IWoyouService;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.ComponentName;
