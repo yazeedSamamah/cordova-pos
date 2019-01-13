@@ -19,7 +19,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
-
+import android.app.AlertDialog;
 
 public class NewActivity extends Activity {
 	private IWoyouService woyouService;
@@ -67,7 +67,16 @@ public class NewActivity extends Activity {
 			} catch (RemoteException e) {
 				e.printStackTrace();
 			}*/
-				Toast.makeText(getApplicationContext(), "HI yazeed  " + i,	Toast.LENGTH_SHORT).show();
+				AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
+alertDialog.setTitle("Alert");
+alertDialog.setMessage("Alert message to be shown");
+alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+    new DialogInterface.OnClickListener() {
+        public void onClick(DialogInterface dialog, int which) {
+            dialog.dismiss();
+        }
+    });
+alertDialog.show();
     }
    /* WebView mWebView;
 
