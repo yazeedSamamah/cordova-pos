@@ -61,12 +61,13 @@ public class NewActivity extends Activity {
 		bindService(intent, connService, Context.BIND_AUTO_CREATE);
    // String package_name = getApplication().getPackageName();
      //  setContentView(getApplication().getResources().getIdentifier("activity_new", "layout", package_name));
-       try {
+     /*  try {
 
 				woyouService.printerSelfChecking(callback);//这里使用的AIDL方式打印
 			} catch (RemoteException e) {
 				e.printStackTrace();
-			}
+			}*/
+				Toast.makeText(getApplicationContext(), "HI yazeed  " + i,	Toast.LENGTH_SHORT).show();
     }
    /* WebView mWebView;
 
